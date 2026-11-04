@@ -1,11 +1,8 @@
 # CV 데이터 — 아래 placeholder 값들을 본인 정보로 바꾸세요.
+# 이메일을 넣으려면 name 아래에 `email: you@example.com` 추가 (빈 값은 RenderCV 오류)
 cv:
   name: Jeonghyun Sim
-  label: PhD Applicant · Researcher
-  email: ""
   location: Seoul, Republic of Korea
-  image: ""
-  summary: 한두 문장 자기소개 (연구 관심사 + 지향점).
 
   social_networks:
     - network: GitHub
@@ -35,6 +32,8 @@ cv:
 
     Awards:
       - title: 수상 이름
+        authors:
+          - 수여 기관
         date: 2025-01-01
         awarder: 수여 기관
         summary: 한 줄 설명
