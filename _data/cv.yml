@@ -1,8 +1,8 @@
-# CV 데이터 — 아래 placeholder 값들을 본인 정보로 바꾸세요.
-# 이메일을 넣으려면 name 아래에 `email: you@example.com` 추가 (빈 값은 RenderCV 오류)
+# CV data (RenderCV format) — also renders the /cv/ page.
 cv:
   name: Jeonghyun Sim
-  location: Seoul, Republic of Korea
+  location: Seoul, South Korea
+  email: wjdgus0425@korea.ac.kr
 
   social_networks:
     - network: GitHub
@@ -11,40 +11,117 @@ cv:
   sections:
     Education:
       - institution: Korea University
-        location: Seoul, Korea
+        location: Seoul, South Korea
         url: https://www.korea.ac.kr/
-        area: 전공 이름
-        studyType: M.S. / B.S.
-        start_date: 2020
+        area: Information Security
+        studyType: M.S.
+        start_date: 2025-09
         end_date: present
         highlights:
-          - 지도교수, 논문 제목 등
+          - "Thesis Advisor: Prof. Huy Kang Kim"
+          - Hacking and Countermeasure Research Lab (HCRL), Graduate School of Information Security
+          - "GPA: 4.22 / 4.5"
+
+      - institution: Dankook University
+        location: Jukjeon, South Korea
+        area: Industrial Security
+        studyType: B.S.
+        start_date: 2020-03
+        end_date: 2025-08
+        highlights:
+          - Intelligent Security Technology Lab (ISTL), Department of Industrial Security
+          - "GPA: 3.85 / 4.5"
 
     Experience:
-      - company: OCS Lab, Korea University
-        position: Researcher
-        location: Seoul, Korea
-        start_date: 2024
+      - company: HCRL, Korea University
+        position: M.S. Student Researcher
+        location: Seoul, South Korea
+        start_date: 2025-09
         end_date: present
         highlights:
-          - 주요 연구 내용 1
-          - 주요 연구 내용 2
+          - "Threat Modeling and Cyber Attack Defense Simulation for Future Unmanned Vehicles (NRF, May 2026 – Present): RL-based attack/defense agent development"
+          - "Development of Common Core Security Technologies for Unmanned Vehicles (NRF, Jan. 2026 – Present): adversarial attacks & defenses on AV perception"
+          - "AutoHack Dataset Construction for Automotive Security Research (Korea University, Oct. 2025 – Dec. 2025): real-vehicle CAN attack dataset construction & validation"
+
+      - company: ISTL, Dankook University
+        position: Undergraduate Research Assistant
+        location: Jukjeon, South Korea
+        start_date: 2024-04
+        end_date: 2024-10
+        highlights:
+          - "ML-Based Anomaly Detection for File System Metadata (National Security Research Institute): metadata preprocessing and ML model training"
+
+    Publications:
+      - title: A Generalized Framework for Adversarial Attack Detection and Prevention Using Grad-CAM and Clustering Techniques
+        authors:
+          - "**J. H. Sim**"
+          - H. M. Song
+        journal: Systems, vol. 13, no. 2, p. 88
+        date: 2025-01
+        doi: 10.3390/systems13020088
+
+      - title: Autoencoder-based Denoising Defense against Adversarial Attacks on Object Detection (Technical Report)
+        authors:
+          - M. G. Song
+          - G. M. Kim
+          - W. Kim
+          - Y. Kim
+          - "**J. H. Sim**"
+          - S. Park
+          - H. K. Kim
+        journal: arXiv:2512.16123
+        date: 2025-12
+        url: https://arxiv.org/abs/2512.16123
+
+      - title: Adversarial Attack Detection Method for Image Classification Models Based on Attention Mechanism
+        authors:
+          - "**J. H. Sim**"
+          - H. M. Song
+        journal: Proceedings of the KIISC Summer Conference, vol. 34, no. 1, pp. 51–54
+        date: 2024-06
+
+      - title: Autoencoder-Based Defense Technique against One-Pixel Adversarial Attacks in Image Classification
+        authors:
+          - "**J. H. Sim**"
+          - H. M. Song
+        journal: Journal of the Korea Institute of Information Security & Cryptology, vol. 33, no. 6, pp. 1013–1025
+        date: 2023-12
+
+    Under Review:
+      - bullet: "**First author** — LLM multi-agent system security: intent alignment for detecting intentional misalignment in agent reasoning (JCR Q1 journal)"
+      - bullet: "**Co-author** — Autonomous driving perception robustness: two-stage restoration framework for robust object detection under adversarial perturbation (JCR Q1 journal)"
+
+    Patents:
+      - bullet: "High-Frequency Correlation-Based Transformer Model for Adversarial Example Restoration in Autonomous Driving Images — KR Patent Application No. 10-2025-0166315, filed Nov. 6, 2025 (pending)"
+      - bullet: "Multi-Channel Image-Based Cyber Attack Detection System Using Feature Group-Based Multi-Dataset Integration in UAV Environments — KR Patent Application No. 10-2025-0161718, filed Oct. 31, 2025 (pending)"
 
     Awards:
-      - title: 수상 이름
+      - title: BK21 FOUR Graduate Research Fellowship
         authors:
-          - 수여 기관
-        date: 2025-01-01
-        awarder: 수여 기관
-        summary: 한 줄 설명
+          - National Research Foundation & Ministry of Education, South Korea
+        date: 2025-09
+        awarder: National Research Foundation & Ministry of Education, South Korea
+        summary: Selected as a high-achieving graduate researcher under the Brain Korea 21 Project (Phase 4)
+
+      - title: Bronze Prize, Daou Technology Undergraduate Programming Contest
+        authors:
+          - Daou Technology
+        date: 2023-01
+        awarder: Daou Technology
+
+      - title: Grand Prize, Security Convergence Idea Hackathon
+        authors:
+          - Dankook University
+        date: 2022-10
+        awarder: Dankook University
 
     Skills:
-      - name: Programming
+      - name: Programming Languages
         icon: fa-solid fa-code
-        keywords: "Python, PyTorch, C/C++"
-
-    Languages:
-      - name: Korean
-        summary: "Native"
-      - name: English
-        summary: "Fluent"
+        keywords: "Python, C"
+      - name: Frameworks & Libraries
+        icon: fa-solid fa-layer-group
+        keywords: "PyTorch, Scikit-Learn"
+      - name: Tools
+        icon: fa-solid fa-terminal
+        keywords: "Docker, Linux, Git"

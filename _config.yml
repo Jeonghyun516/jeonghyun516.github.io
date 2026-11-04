@@ -9,10 +9,10 @@ last_name: Sim
 contact_note: >
   Feel free to reach out — I'm always happy to chat about research and collaboration.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  PhD Applicant | Researcher at OCS Lab, Korea University
+  M.S. student at HCRL, Korea University · Agentic AI, Multi-Agent Systems, AI Security, Trustworthy ML
 footer_text: >
   Built with <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> · Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Jeonghyun Sim, Korea University, OCS Lab, researcher, PhD applicant # add your own keywords or leave empty
+keywords: Jeonghyun Sim, Korea University, HCRL, agentic AI, multi-agent systems, AI security, trustworthy machine learning
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ✦ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 

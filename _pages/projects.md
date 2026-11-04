@@ -5,7 +5,7 @@ permalink: /projects/
 description: Things I have built and explored.
 nav: true
 nav_order: 3
-display_categories: [research, side]
+display_categories: [HCRL, ISTL]
 horizontal: false
 ---
 

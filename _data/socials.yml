@@ -1,9 +1,8 @@
 # 소셜 링크 — 위에서부터 순서대로 표시됩니다.
 # 더 많은 옵션: https://github.com/george-gca/jekyll-socials
-# cv_pdf: /assets/pdf/cv.pdf # CV PDF를 assets/pdf/에 넣고 주석 해제
-# email: you@example.com # 연락받을 이메일로 바꾸고 주석 해제
+email: wjdgus0425@korea.ac.kr
 github_username: Jeonghyun516
+cv_pdf: /assets/rendercv/rendercv_output/Jeonghyun_Sim_CV.pdf
 # scholar_userid: # Google Scholar ID (프로필 URL의 user= 뒤 값)
 # linkedin_username: # LinkedIn 아이디
-# orcid_id: # ORCID
 rss_icon: false

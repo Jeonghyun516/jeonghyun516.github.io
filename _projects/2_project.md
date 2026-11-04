@@ -1,13 +1,10 @@
 ---
 layout: page
-title: Research Project Two
-description: 한 줄 설명 — 핵심 기여나 결과 수치
+title: "Core Security for Unmanned Vehicles"
+description: "Adversarial attacks & defenses on AV perception · NRF · 2026–"
 importance: 2
-category: research
-github: https://github.com/Jeonghyun516
+category: HCRL
 related_publications: false
 ---
 
-여기에 프로젝트 상세 내용을 쓰세요. (배경 → 방법 → 결과 순서 추천)
-
-썸네일을 넣고 싶으면 이미지를 `assets/img/`에 넣고 front matter에 `img: assets/img/파일명.jpg` 를 추가하면 됩니다.
+Development of common core security technologies for unmanned vehicles, funded by the National Research Foundation of Korea (Jan. 2026 – Present). I work on adversarial attacks and defenses targeting the camera/sensing perception of autonomous vehicles.

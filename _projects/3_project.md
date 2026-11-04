@@ -1,13 +1,10 @@
 ---
 layout: page
-title: Side Project
-description: 한 줄 설명 — 오픈소스 툴, 해커톤 등
+title: "AutoHack CAN Attack Dataset"
+description: "Real-vehicle CAN attack dataset for automotive security · 2025"
 importance: 3
-category: side
-github: https://github.com/Jeonghyun516
+category: HCRL
 related_publications: false
 ---
 
-여기에 프로젝트 상세 내용을 쓰세요. (배경 → 방법 → 결과 순서 추천)
-
-썸네일을 넣고 싶으면 이미지를 `assets/img/`에 넣고 front matter에 `img: assets/img/파일명.jpg` 를 추가하면 됩니다.
+AutoHack dataset construction for automotive security research at Korea University (Oct. 2025 – Dec. 2025): building and validating a real-vehicle Controller Area Network (CAN) attack dataset for intrusion detection research.
