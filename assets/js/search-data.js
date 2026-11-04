@@ -47,7 +47,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-cyber-attack-defense-simulation-for-unmanned-vehicles",
           title: 'Cyber Attack Defense Simulation for Unmanned Vehicles',
-          description: "Threat modeling and RL-based attack/defense agents · NRF · 2026–",
+          description: "Threat modeling and RL-based attack/defense agents · NRF · 2026",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-core-security-for-unmanned-vehicles",
