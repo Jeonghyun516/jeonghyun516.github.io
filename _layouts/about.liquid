@@ -1,80 +1,160 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+{% assign hero = page.hero %}
+<div class="post home">
+  <!-- Hero -->
+  <section class="hero reveal">
+    <div class="hero-text">
+      {% if hero.status %}
+        <span class="eyebrow"><span class="pulse-dot"></span>{{ hero.status }}</span>
       {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+      <h1 class="hero-name">
+        <span class="hero-hi">{{ hero.greeting | default: "Hi, I'm" }}</span>
+        <span class="grad-text">
+          {{- site.first_name }}
+          {{ site.middle_name }}
+          {{ site.last_name -}}
+        </span>
+      </h1>
+      {% if hero.roles %}
+        <p class="hero-role">
+          <span class="hero-role-prefix">{{ hero.role_prefix | default: 'I work on' }}</span>
+          <span class="typed" data-words="{{ hero.roles | join: '|' | escape }}">{{ hero.roles | first }}</span
+          ><span class="caret" aria-hidden="true"></span>
+        </p>
+      {% endif %}
+      {% if page.subtitle %}
+        <p class="hero-tagline">{{ page.subtitle }}</p>
+      {% endif %}
+      {% if hero.buttons %}
+        <div class="hero-cta">
+          {% for b in hero.buttons %}
+            <a
+              class="btn-pill {% if forloop.first %}btn-pill-primary{% endif %}"
+              href="{% if b.url contains '://' or b.url contains 'mailto:' %}{{ b.url }}{% else %}{{ b.url | relative_url }}{% endif %}"
+            >
+              {% if b.icon %}<i class="{{ b.icon }}"></i>{% endif %}
+              {{ b.label }}
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if page.social %}
+        <div class="hero-social">{% social_links %}</div>
+      {% endif %}
+    </div>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+    <div class="hero-visual" aria-hidden="true">
+      <div class="avatar-ring tilt">
+        <div class="avatar">
+          {% if page.profile.image %}
+            <img src="{{ page.profile.image | prepend: 'assets/img/' | relative_url }}" alt="{{ site.first_name }} {{ site.last_name }}">
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            <span class="avatar-initials">
+              {{- site.first_name | slice: 0 -}}
+              {{- site.last_name | slice: 0 -}}
+            </span>
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
+        </div>
+      </div>
+      {% for chip in hero.chips %}
+        <span class="float-chip float-chip-{{ forloop.index }}">{{ chip }}</span>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="home-section reveal" id="about">
+    <div class="section-label"><span>01</span> about</div>
+    <div class="glass glass-pad bio">{{ content }}</div>
+  </section>
+
+  <!-- Research interests -->
+  {% if page.interests %}
+    <section class="home-section reveal" id="research">
+      <div class="section-label"><span>02</span> research interests</div>
+      <div class="interest-grid">
+        {% for item in page.interests %}
+          <div class="glass interest-card" style="--d: {{ forloop.index0 | times: 80 }}ms">
+            <div class="interest-icon"><i class="{{ item.icon | default: 'fa-solid fa-star' }}"></i></div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- News -->
+  {% if page.announcements and page.announcements.enabled %}
+    <section class="home-section reveal" id="news">
+      <div class="section-label">
+        <span>03</span> news
+        <a class="section-more" href="{{ '/news/' | relative_url }}">all news →</a>
+      </div>
+      <div class="glass glass-pad">
+        {% if site.news != blank %}
+          <ol class="timeline">
+            {% assign news = site.news | reverse %}
+            {% for item in news limit: page.announcements.limit %}
+              <li>
+                <time>{{ item.date | date: '%b %Y' }}</time>
+                <div class="timeline-body">
+                  {% if item.inline %}
+                    {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  {% else %}
+                    <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                  {% endif %}
+                </div>
+              </li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <p class="muted">No news so far…</p>
         {% endif %}
       </div>
-    {% endif %}
+    </section>
+  {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+  <!-- Latest posts -->
+  {% if page.latest_posts and page.latest_posts.enabled %}
+    <section class="home-section reveal" id="posts">
+      <div class="section-label">
+        <span>04</span> latest posts
+        <a class="section-more" href="{{ '/blog/' | relative_url }}">all posts →</a>
+      </div>
+      <div class="glass glass-pad">{% include latest_posts.liquid %}</div>
+    </section>
+  {% endif %}
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
+  <!-- Selected papers -->
+  {% if page.selected_papers %}
+    <section class="home-section reveal" id="papers">
+      <div class="section-label">
+        <span>
+          {%- if page.latest_posts.enabled %}05{% else %}04{% endif -%}
+        </span>
+        selected publications
+        <a class="section-more" href="{{ '/publications/' | relative_url }}">all papers →</a>
+      </div>
       {% include selected_papers.liquid %}
-    {% endif %}
+    </section>
+  {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
+  <!-- Contact -->
+  {% if page.social %}
+    <section class="home-section reveal" id="contact">
+      <div class="glass contact-card">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <h2>Let's <span class="grad-text">connect</span>.</h2>
+        <p>{{ site.contact_note }}</p>
         <div class="contact-icons">{% social_links %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
       </div>
-    {% endif %}
+    </section>
+  {% endif %}
 
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+  {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+    {% include newsletter.liquid center=true %}
+  {% endif %}
 </div>

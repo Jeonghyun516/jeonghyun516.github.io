@@ -17,6 +17,11 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <script>
+      document.documentElement.classList.add('reveal-ready');
+    </script>
+    <div class="bg-aurora" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
     <!-- Header -->
     {% include header.liquid %}
 
