@@ -39,7 +39,7 @@ cv:
         start_date: 2025-09
         end_date: present
         highlights:
-          - "Threat Modeling and Cyber Attack Defense Simulation for Future Unmanned Vehicles (NRF, May 2026 – Present): RL-based attack/defense agent development"
+          - "Threat Modeling and Cyber Attack Defense Simulation for Future Unmanned Vehicles (NRF, May 2026 – Dec. 2026): RL-based attack/defense agent development"
           - "Development of Common Core Security Technologies for Unmanned Vehicles (NRF, Jan. 2026 – Present): adversarial attacks & defenses on AV perception"
           - "AutoHack Dataset Construction for Automotive Security Research (Korea University, Oct. 2025 – Dec. 2025): real-vehicle CAN attack dataset construction & validation"
 

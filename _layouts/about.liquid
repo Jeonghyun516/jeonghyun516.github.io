@@ -64,9 +64,9 @@ layout: default
     </div>
   </section>
 
-  <!-- About -->
-  <section class="home-section reveal" id="about">
-    <div class="section-label"><span>01</span> about</div>
+  <!-- Biography -->
+  <section class="home-section reveal" id="biography">
+    <div class="section-label"><span>01</span> biography</div>
     <div class="glass glass-pad bio">{{ content }}</div>
   </section>
 
@@ -139,6 +139,19 @@ layout: default
         <a class="section-more" href="{{ '/publications/' | relative_url }}">all papers →</a>
       </div>
       {% include selected_papers.liquid %}
+    </section>
+  {% endif %}
+
+  <!-- Patents -->
+  {% if page.patents and site.data.patents %}
+    <section class="home-section reveal" id="patents">
+      <div class="section-label">
+        <span>
+          {%- if page.latest_posts.enabled %}06{% else %}05{% endif -%}
+        </span>
+        patents
+      </div>
+      {% include patents.liquid %}
     </section>
   {% endif %}
 

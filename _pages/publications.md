@@ -18,3 +18,9 @@ nav_order: 2
 {% bibliography %}
 
 </div>
+
+<div class="publications">
+  <h2 class="bibliography">patents</h2>
+</div>
+
+{% include patents.liquid %}
