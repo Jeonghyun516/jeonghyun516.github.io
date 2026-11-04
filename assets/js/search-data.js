@@ -30,33 +30,61 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "news-예시-joined-ocs-lab-korea-university-as-a-researcher",
-          title: '🔬 (예시) Joined OCS Lab, Korea University as a researcher.',
+        },{id: "news-our-paper-on-adversarial-attack-detection-with-grad-cam-and-clustering-was-published-in-systems-mdpi",
+          title: '🎉 Our paper on adversarial attack detection with Grad-CAM and clustering was published...',
           description: "",
-          section: "News",},{id: "news-예시-논문이-학회-이름-2026에-accept-되었습니다-news-폴더에서-수정하세요",
-          title: '🎉 (예시) 논문이 학회 이름 2026에 accept 되었습니다! — _news/ 폴더에서 수정하세요.',
+          section: "News",},{id: "news-started-my-m-s-in-information-security-at-korea-university-hcrl-under-prof-huy-kang-kim-supported-by-the-bk21-four-graduate-research-fellowship",
+          title: '🎓 Started my M.S. in Information Security at Korea University (HCRL) under Prof....',
           description: "",
-          section: "News",},{id: "projects-research-project-one",
-          title: 'Research Project One',
-          description: "한 줄 설명 — 어떤 문제를 어떻게 풀었는지",
+          section: "News",},{id: "news-filed-two-korean-patent-applications-on-adversarial-example-restoration-for-autonomous-driving-and-cyber-attack-detection-in-uav-environments",
+          title: '💡 Filed two Korean patent applications on adversarial example restoration for autonomous driving...',
+          description: "",
+          section: "News",},{id: "news-technical-report-autoencoder-based-denoising-defense-against-adversarial-attacks-on-object-detection-is-out-on-arxiv",
+          title: '📄 Technical report Autoencoder-based Denoising Defense against Adversarial Attacks on Object Detection is...',
+          description: "",
+          section: "News",},{id: "news-started-the-nrf-project-threat-modeling-and-cyber-attack-defense-simulation-for-future-unmanned-vehicles-developing-rl-based-attack-defense-agents",
+          title: '🚗 Started the NRF project Threat Modeling and Cyber Attack Defense Simulation for...',
+          description: "",
+          section: "News",},{id: "projects-cyber-attack-defense-simulation-for-unmanned-vehicles",
+          title: 'Cyber Attack Defense Simulation for Unmanned Vehicles',
+          description: "Threat modeling and RL-based attack/defense agents · NRF · 2026–",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-research-project-two",
-          title: 'Research Project Two',
-          description: "한 줄 설명 — 핵심 기여나 결과 수치",
+            },},{id: "projects-core-security-for-unmanned-vehicles",
+          title: 'Core Security for Unmanned Vehicles',
+          description: "Adversarial attacks &amp; defenses on AV perception · NRF · 2026–",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-side-project",
-          title: 'Side Project',
-          description: "한 줄 설명 — 오픈소스 툴, 해커톤 등",
+            },},{id: "projects-autohack-can-attack-dataset",
+          title: 'AutoHack CAN Attack Dataset',
+          description: "Real-vehicle CAN attack dataset for automotive security · 2025",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
+            },},{id: "projects-ml-anomaly-detection-for-file-system-metadata",
+          title: 'ML Anomaly Detection for File System Metadata',
+          description: "Metadata preprocessing &amp; ML anomaly detection · NSR · 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
             },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%77%6A%64%67%75%73%30%34%32%35@%6B%6F%72%65%61.%61%63.%6B%72", "_blank");
+        },
+      },{
         id: 'social-github',
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
           window.open("https://github.com/Jeonghyun516", "_blank");
+        },
+      },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/rendercv/rendercv_output/Jeonghyun_Sim_CV.pdf", "_blank");
         },
       },{
         id: 'social-rss',
