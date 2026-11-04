@@ -87,13 +87,6 @@ ninja.data = [{
           window.open("/assets/rendercv/rendercv_output/Jeonghyun_Sim_CV.pdf", "_blank");
         },
       },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
