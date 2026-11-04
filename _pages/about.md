@@ -10,13 +10,13 @@ hero:
   greeting: Hi, I'm
   role_prefix: I work on
   roles: # 타이핑 애니메이션으로 순환하는 문구
-    - Research Topic One
-    - Research Topic Two
-    - Research Topic Three
+    - Adversarial Machine Learning
+    - Adversarial Attack Detection
+    - Robust & Trustworthy AI
   chips: # 사진 주변에 떠다니는 키워드 (최대 3개 추천)
-    - "#keyword1"
-    - "#keyword2"
-    - "#keyword3"
+    - "#AdversarialML"
+    - "#Grad-CAM"
+    - "#AISecurity"
   buttons: # 첫 번째 버튼이 강조 버튼
     - label: Publications
       url: /publications/
@@ -33,15 +33,15 @@ profile:
 
 # 연구 관심사 카드 (아이콘: https://fontawesome.com/icons)
 interests:
-  - title: Research Area One
+  - title: Adversarial Attack Detection
+    icon: fa-solid fa-magnifying-glass-chart
+    description: Spotting adversarial inputs to vision models using explainability signals such as Grad-CAM and attention, combined with clustering.
+  - title: Adversarial Defense
     icon: fa-solid fa-shield-halved
-    description: 이 분야에서 어떤 문제를 보고 있는지 1–2문장으로 적어주세요.
-  - title: Research Area Two
+    description: Autoencoder-based denoising and purification defenses for image classification and object detection.
+  - title: Trustworthy AI Security
     icon: fa-solid fa-robot
-    description: 이 분야에서 어떤 문제를 보고 있는지 1–2문장으로 적어주세요.
-  - title: Research Area Three
-    icon: fa-solid fa-network-wired
-    description: 이 분야에서 어떤 문제를 보고 있는지 1–2문장으로 적어주세요.
+    description: Making deep learning systems robust and reliable against attacks in real-world security settings.
 
 selected_papers: true # _bibliography/papers.bib 에서 selected={true} 인 논문 표시
 social: true # 소셜 아이콘 + Contact 섹션 표시
