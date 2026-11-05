@@ -63,6 +63,4 @@ latest_posts:
 
 **Jeonghyun Sim** is an M.S. student in Information Security at the [Hacking and Countermeasure Research Lab (HCRL)](https://ocslab.hksecurity.net/), Korea University, advised by Prof. Huy Kang Kim. Jeonghyun's research focuses on **agentic AI**, **multi-agent systems**, **AI security**, and **trustworthy machine learning**, with current work on making LLM-based multi-agent automation secure and reliable, from intent alignment in agent reasoning to defenses against jailbreaks and prompt injections.
 
-Earlier work covers the adversarial robustness of deep learning: detecting adversarial examples with Grad-CAM, attention, and clustering, and building autoencoder-based defenses for image classification and object detection. Jeonghyun has also worked on security for autonomous and unmanned vehicles, including CAN intrusion detection datasets, adversarial attacks on AV perception, and RL-based attack/defense agents.
-
 Jeonghyun received a B.S. in Industrial Security from Dankook University and conducted research at the Intelligent Security Technology Lab (ISTL) there.
