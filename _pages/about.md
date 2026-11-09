@@ -9,12 +9,12 @@ hero:
   greeting: Hi, I'm
   role_prefix: I work on
   roles: # 타이핑 애니메이션으로 순환하는 문구
-    - Agentic AI
     - Multi-Agent Systems
     - AI Security
+    - AI for Security
     - Trustworthy Machine Learning
   chips: # 사진 주변에 떠다니는 키워드 (최대 3개 추천)
-    - "#AgenticAI"
+    - "#VehicleSecurity"
     - "#LLMSecurity"
     - "#AdversarialML"
   buttons: # 첫 번째 버튼이 강조 버튼
@@ -33,15 +33,15 @@ profile:
 
 # 연구 관심사 카드 (아이콘: https://fontawesome.com/icons)
 interests:
-  - title: Agentic AI
-    icon: fa-solid fa-robot
-    description: Building secure and reliable LLM agents that plan, reason, and act autonomously.
   - title: Multi-Agent Systems
     icon: fa-solid fa-diagram-project
     description: Intent alignment and detecting intentional misalignment in the reasoning of LLM multi-agent systems.
   - title: AI Security
     icon: fa-solid fa-shield-halved
     description: Auditing LLM vulnerabilities, including jailbreaks and prompt injections, and defensive alignment.
+  - title: AI for Security
+    icon: fa-solid fa-car
+    description: Applying machine learning to security problems, from vehicle network intrusion detection to automated vulnerability detection.
   - title: Trustworthy Machine Learning
     icon: fa-solid fa-scale-balanced
     description: Adversarial robustness of vision models, from attack detection to restoration for autonomous driving perception.
@@ -61,6 +61,6 @@ latest_posts:
   limit: 3
 ---
 
-**Jeonghyun Sim** is an M.S. student in Information Security at the [Hacking and Countermeasure Research Lab (HCRL)](https://ocslab.hksecurity.net/), Korea University, advised by Prof. Huy Kang Kim. Jeonghyun's research focuses on **agentic AI**, **multi-agent systems**, **AI security**, and **trustworthy machine learning**, with current work on making LLM-based multi-agent automation secure and reliable, from intent alignment in agent reasoning to defenses against jailbreaks and prompt injections.
+**Jeonghyun Sim** is an M.S. student in Information Security at the [Hacking and Countermeasure Research Lab (HCRL)](https://ocslab.hksecurity.net/), Korea University, advised by Prof. Huy Kang Kim. Jeonghyun's research focuses on **multi-agent systems**, **AI security**, **AI for security**, and **trustworthy machine learning**, with current work on making LLM-based multi-agent automation secure and reliable, from intent alignment in agent reasoning to defenses against jailbreaks and prompt injections.
 
 Jeonghyun received a B.S. in Industrial Security from Dankook University and conducted research at the Intelligent Security Technology Lab (ISTL) there.
